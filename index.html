@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    
+    <script>
+      function Focus() {
+        roll_number.focus();
+      }
+    </script>
+  </head>
+
+  <body onload="Focus()">
+    <div class="container">
+      <form id="form" method="get">
+        <h1>Registration</h1>
+        <div class="input-control">
+          <label for="roll_number">Roll Number</label>
+          <input
+            id="roll_number"
+            type="number"
+            onchange="getStudent()"
+          />
+        </div>
+        <div class="input-control">
+          <label for="name">Full Name</label>
+          <input id="fname"  type="text" />
+        </div>
+        <div class="input-control">
+          <label for="cls">Class</label>
+          <input id="cls"  type="text" />
+        </div>
+        <div class="input-control">
+          <label for="dob">Date of Birth</label>
+          <input id="dob"  type="date" />
+        </div>
+        <div class="input-control">
+          <label for="enroll">Enrollment Date</label>
+          <input id="enroll"  type="date" />
+        </div>
+        <div class="input-control">
+          <label for="address">Address</label>
+          <input id="address"  type="text" />
+        </div>
+
+  
+          <button type="button" id="savebtn" onclick="saveData()" disabled>
+            Save
+          </button>
+          <button type="button" id="updatebtn" onclick="changeData()" disabled>
+            Update
+          </button>
+          <button type="button" id="resetbtn" onclick="resetForm()" disabled>
+            Reset
+          </button>
+        </form>
+      </div>
+    
+      <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="./index.js"></script>
+  </body>
+</html>
